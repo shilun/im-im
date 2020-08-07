@@ -1,6 +1,7 @@
 package com.im.domain;
 
 import com.common.util.AbstractBaseEntity;
+import com.im.domain.model.GroupStatusEnum;
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -21,10 +22,16 @@ public class GroupInfo extends AbstractBaseEntity {
      * 群图标
      */
     private String icon;
+
     /**
-     * 组用户
+     * 代理
      */
-    private List<GroupUserRel> users;
+    private String proxyId;
+
+    /**
+     * 组当前状态
+     */
+    private GroupStatusEnum groupStatus;
     /**
      * 描述
      */

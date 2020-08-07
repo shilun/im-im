@@ -1,6 +1,6 @@
 package com.im.domain.model;
 
-public enum TargetTypeEnum {
+public enum RecipientTypeEnum {
     User,
     Group
 }

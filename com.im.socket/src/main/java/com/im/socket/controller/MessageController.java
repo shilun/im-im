@@ -9,14 +9,9 @@ import org.springframework.stereotype.Component;
 @Controller
 @Component
 @Slf4j
-public class LoginContoller {
-    @MessageMapping("/login/in")
+public class MessageController {
+    @MessageMapping("/message/send")
     public void in(ChannelHandlerContext context) {
         log.warn("in");
     }
-    @MessageMapping("/login/out")
-    public void out(ChannelHandlerContext context){
-        context.channel().close();
-    }
-
 }

@@ -10,4 +10,6 @@ public interface ServerInfoService extends MongoService<ServerInfo> {
      * @return
      */
     ServerInfo findAvailable();
+
+
 }

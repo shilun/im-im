@@ -1,5 +1,6 @@
 package com.im.domain;
 
+import com.common.util.AbstractBaseEntity;
 import com.im.domain.model.UserTypeEnum;
 import lombok.Data;
 
@@ -7,7 +8,7 @@ import lombok.Data;
 /**
  * 组成员
  */
-public class GroupUserRel {
+public class GroupUserRel extends AbstractBaseEntity {
     /**
      * 组管标识
      */

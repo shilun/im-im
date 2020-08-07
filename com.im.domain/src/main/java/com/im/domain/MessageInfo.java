@@ -1,7 +1,9 @@
 package com.im.domain;
 
+import com.common.util.AbstractBaseEntity;
+import com.common.util.AbstractSeqIdEntity;
 import com.im.domain.model.ContentTypeEnum;
-import com.im.domain.model.TargetTypeEnum;
+import com.im.domain.model.RecipientTypeEnum;
 import lombok.Data;
 
 import java.util.Date;
@@ -12,11 +14,16 @@ import java.util.Date;
  * 当单聊时消息接收确认时直接清楚
  * 对于群聊保留1周数据
  */
-public  class MsgInf {
+public  class MessageInfo extends AbstractBaseEntity implements AbstractSeqIdEntity {
     /**
      * 发送者
      */
     private String senderPin;
+
+    /**
+     * 代理
+     */
+    private String proxyId;
     /**
      * 内容
      */
@@ -29,12 +36,7 @@ public  class MsgInf {
     /**
      * 接收者类型 用户/组
      */
-    private TargetTypeEnum targetType;
-    /**
-     * 发送时间
-     */
-    private Date createTime;
-
+    private RecipientTypeEnum recipientType;
     /**
      * 接收者 用户pin/组id
      */

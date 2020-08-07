@@ -1,7 +1,7 @@
 package com.im.domain;
 
 import com.im.domain.model.ContentTypeEnum;
-import com.im.domain.model.TargetTypeEnum;
+import com.im.domain.model.RecipientTypeEnum;
 import lombok.Data;
 
 @Data
@@ -25,7 +25,7 @@ public class Recipient {
     /**
      * 接收者类型
      */
-    private TargetTypeEnum targetType;
+    private RecipientTypeEnum targetType;
 
     /**
      * 接收者
